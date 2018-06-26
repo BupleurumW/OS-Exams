@@ -8,7 +8,6 @@ $ ./myecho x
 x
 $ ./myecho a b c
 a b c
-
 mycat.c
 mycat.c的功能与系统cat程序相同
 mycat将指定的文件内容输出到屏幕，例子如下：
@@ -23,7 +22,6 @@ root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
 ...
-
 mycp.c
 mycp.c的功能与系统cp程序相同
 将源文件复制到目标文件，例子如下：
@@ -39,7 +37,6 @@ root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
 ...
-
 多进程题目
 mysys.c: 实现函数mysys，用于执行一个系统命令，要求如下
 mysys的功能与系统函数system相同，要求用进程管理相关系统调用自己实现一遍
@@ -57,7 +54,6 @@ int main()
     printf("--------------------------------------------------\n");
     return 0;
 }
-
 测试程序的输出结果
 --------------------------------------------------
 HELLO WORLD
@@ -66,27 +62,22 @@ bin    core  home	     lib	 mnt   root  snap  tmp	vmlinuz
 boot   dev   initrd.img      lost+found  opt   run   srv   usr	vmlinuz.old
 cdrom  etc   initrd.img.old  media	 proc  sbin  sys   var
 --------------------------------------------------
-
 sh1.c: 实现shell程序，要求具备如下功能
 支持命令参数
 $ echo arg1 arg2 arg3
 $ ls /bin /usr/bin /home
-
-实现内置命令cd、pwd、exit
+实现内置命令cd、pwd、exit
 $ cd /bin
 $ pwd
 /bin
-
 sh2.c: 实现shell程序，要求在第1版的基础上，添加如下功能
 实现文件重定向
 $ echo hello >log
 $ cat log
 hello
-
 sh3.c: 实现shell程序，要求在第2版的基础上，添加如下功能
 实现管道
 $ cat /etc/passwd | wc -l
-
 实现管道和文件重定向
 $ cat input.txt
 3
@@ -100,7 +91,6 @@ $ cat output.txt
 1
 2
 3
-
 多线程题目
 pi1.c: 使用2个线程根据莱布尼兹级数计算PI
 莱布尼兹级数公式: 1 - 1/3 + 1/5 - 1/7 + 1/9 - ... = PI/4
@@ -125,7 +115,7 @@ pc1.c: 使用条件变量解决生产者、计算者、消费者问题
 计算者从buffer1取出字符，将小写字符转换为大写字符，放入到buffer2
 消费者从buffer2取出字符，将其打印到屏幕上
 pc2.c: 使用信号量解决生产者、计算者、消费者问题
-功能和前面的实验相同，使用信号量解决
+功能和前面的实验相同，使用信号量解决
 ring.c: 创建N个线程，它们构成一个环
 创建N个线程：T1、T2、T3、… TN
 T1向T2发送整数1
